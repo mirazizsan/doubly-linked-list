@@ -1,4 +1,4 @@
-#include "DoublyLinkedList.h"
+﻿#include "DoublyLinkedList.h"
 
 void DoublyLinkedList::push_front(float data)
 {
@@ -174,7 +174,7 @@ void DoublyLinkedList::PrintFromBackToFront()
 
 	while (temp != nullptr)
 	{
-		std::cout << temp->data <<std:: endl;
+		std::cout << "\t" << temp->data << std::endl;
 
 		temp = temp->next;
 	}
@@ -185,9 +185,11 @@ void DoublyLinkedList::PrintFromFrontToBack()
 	Node* temp;
 	temp = _head;
 
+	std::cout << std::endl;
+
 	while (temp != nullptr)
 	{
-		std::cout << temp->data << std::endl;
+		std::cout << temp->data<<" <-> ";
 
 		temp = temp->prev;
 	}

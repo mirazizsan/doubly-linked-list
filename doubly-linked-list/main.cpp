@@ -27,14 +27,17 @@ int main()
 
 	list.PrintFromBackToFront();
 	cout << endl;
-	list.PrintFromFrontToBack();
+	
+	cout << "================================" << endl;
 
 	list.IndividualTask();
 
-	cout << "================================" << endl;
 
 	list.PrintFromBackToFront();
 	cout << endl;
+
+	cout << "================================" << endl;
+
 	list.PrintFromFrontToBack();
 
 	system("pause");
