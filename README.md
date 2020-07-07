@@ -12,9 +12,9 @@ The program finds the node with the maximum value, then adds the node with the v
 
 First, enter the number of nodes.
 
-'''
+```
 How many elements do you want to push on List?
-'''
+```
 
 Than, enter values in each node.
 After execution, program print lists.
