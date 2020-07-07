@@ -16,7 +16,8 @@ First, enter the number of nodes.
 How many elements do you want to push on List?
 ```
 
-Than, enter values in each node.
+Then, enter values in each node.
+
 After execution, program print lists.
 
 ## Built With
