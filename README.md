@@ -8,9 +8,9 @@ The program finds the node with the maximum value, then adds the node with the v
 * Changed List from back to front
 * Change List from front to back
 
-## Deptoyment
+## Deployment
 
-Firtsly, enter the number of nodes.
+First, enter the number of nodes.
 
 '''
 How many elements do you want to push on List?
@@ -23,7 +23,7 @@ After execution, program print lists.
 
 * [Xunderbot](https://github.com/iamxunder) - Mentor
 
-## Autors
+## Authors
 
 * **Sangilov Miraziz** - *Full work* - [Mirazizsan](https://github.com/mirazizsan)
 
