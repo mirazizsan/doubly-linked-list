@@ -2,8 +2,6 @@
 
 using namespace std;
 
-void PrintDefaultList(DoublyLinkedList &list);
-
 int main()
 {
 	int n = 0;
@@ -25,6 +23,8 @@ int main()
 
 	system("cls");
 
+	cout << "\nDefault Doubly Linked List:\n ";
+
 	list.PrintFromBackToFront();
 	cout << endl;
 	
@@ -33,44 +33,18 @@ int main()
 	list.IndividualTask();
 
 
+	cout << "\nChanged Doubly Linked List from back to front:\n ";
+
 	list.PrintFromBackToFront();
 	cout << endl;
 
 	cout << "================================" << endl;
 
+	cout << "\nChanged Doubly Linked List from front to back:\n ";
+
 	list.PrintFromFrontToBack();
 
+	cout << endl;
 	system("pause");
 	return 0;
-}
-
-void PrintDefaultList(DoublyLinkedList &list)
-{
-	try
-	{
-		if (list.empty())
-			throw out_of_range("ERROR: Doubly Linked List is empty!");
-
-		DoublyLinkedList temp_list;
-
-		cout << "\nDefault Doubly Linked List:\n ";
-
-		while (!list.empty())
-		{
-			cout << "\t" << list.back()<<endl;
-			temp_list.push_back(list.back());
-			list.pop_back();
-	
-		}
-
-		while (!temp_list.empty())
-		{
-			list.push_back(temp_list.back());
-			temp_list.pop_back();
-		}
-	}
-	catch (const exception& e)
-	{
-		cout << e.what() << endl;
-	}
 }

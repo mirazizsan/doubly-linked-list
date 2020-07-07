@@ -185,11 +185,9 @@ void DoublyLinkedList::PrintFromFrontToBack()
 	Node* temp;
 	temp = _head;
 
-	std::cout << std::endl;
-
 	while (temp != nullptr)
 	{
-		std::cout << temp->data<<" <-> ";
+		std::cout << "\t" << temp->data << std::endl;
 
 		temp = temp->prev;
 	}
