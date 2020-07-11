@@ -30,6 +30,6 @@ How many elements do you want to push on List?
 
 * **Сангилов Миразиз** - *Полная работа* - [Mirazizsan](https://github.com/mirazizsan)
 
-## License
+## Лицензия
 
 Этот проект лицензирован под MIT License - смотреть [LICENSE.md](LICENSE.md) файл для уточнения.

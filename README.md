@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="/docs/README-en.md">English</a> •
-  <a href="/docs/README-ru.md">Russian</a> •
+  <a href="/docs/README-ru.md">Russian</a>
 </p>
 
 The program finds the node with the maximum value, then adds the node with the value "pi" (3.14).
