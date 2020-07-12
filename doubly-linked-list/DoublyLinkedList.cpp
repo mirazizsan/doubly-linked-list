@@ -128,63 +128,71 @@ bool DoublyLinkedList::empty()
 
 void DoublyLinkedList::IndividualTask()
 {
-	Node* temp;
-	
-	temp = _tail;
-	_max = _tail;
-
-	while (temp->next !=nullptr)
+	try
 	{
-		if ((temp->data >= _max->data) && (temp->data > temp->next->data))
-			_max = temp;
+		if (_size == 0)
+			throw std::out_of_range("ERROR: Doubly Linked List is empty!");
+		Node* temp;
 
-		temp = temp->next;
+		temp = _tail;
+		_max = _tail;
+
+		while (temp->next != nullptr)
+		{
+			if ((temp->data >= _max->data) && (temp->data > temp->next->data))
+				_max = temp;
+
+			temp = temp->next;
+		}
+
+		if (_max < _head)
+			_max = _head;
+
+		if (_max == _tail)
+		{
+			Node* newNode = new Node(3.14);
+
+			_tail->prev = newNode;
+			newNode->next = _tail;
+			_tail = newNode;
+		}
+
+		else
+		{
+			Node* newNode = new Node(3.14);
+			Node* prevMax = _max->prev;
+
+			prevMax->next = newNode;
+			_max->prev = newNode;
+			newNode->next = _max;
+			newNode->prev = prevMax;
+		}
+
+		_size++;
 	}
-
-	if (_max < _head)
-		_max = _head;
-	
-	if (_max == _tail)
+	catch (const std::exception& e)
 	{
-		Node* newNode = new Node(3.14);
-
-		_tail->prev = newNode;
-		newNode->next = _tail;
-		_tail = newNode;
+		std::cout << e.what() << std::endl;
 	}
-
-	else
-	{
-		Node* newNode = new Node(3.14);
-		Node* prevMax = _max->prev;
-
-		prevMax->next = newNode;
-		_max->prev = newNode;
-		newNode->next = _max;
-		newNode->prev = prevMax;
-	}
-
-	_size++;
 }
 
 void DoublyLinkedList::PrintFromBackToFront()
 {
-	Node* temp;
-	temp = _tail;
+		Node* temp;
+		temp = _tail;
 
-	while (temp != nullptr)
-	{
-		std::cout << "\t" << temp->data << std::endl;
+		while (temp != nullptr)
+		{
+			std::cout << "\t" << temp->data << std::endl;
 
-		temp = temp->next;
-	}
+			temp = temp->next;
+		}
 }
 
 void DoublyLinkedList::PrintFromFrontToBack()
 {
 	Node* temp;
 	temp = _head;
-
 	while (temp != nullptr)
 	{
 		std::cout << "\t" << temp->data << std::endl;
