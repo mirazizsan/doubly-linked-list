@@ -1,4 +1,5 @@
 ﻿#include "DoublyLinkedList.h"
+#include <iomanip>
 
 void DoublyLinkedList::push_front(float data)
 {
@@ -183,7 +184,14 @@ void DoublyLinkedList::PrintFromBackToFront()
 
 		while (temp != nullptr)
 		{
-			std::cout << "\t" << temp->data << std::endl;
+			std::cout << "_________" << std::endl;
+			std::cout << "|" << std::setw(5) << "prev" << std::setw(5) << "|" << std::endl;
+			std::cout << "|_________|" << std::endl;
+			std::cout << "|" << std::setw(5) << temp->data << std::setw(5) << "|" << std::endl;
+			std::cout << "|_________|" << std::endl;
+			std::cout << "|" << std::setw(5) << "next" << std::setw(5) << "|" << std::endl;
+			std::cout << "|_________|" << std::endl;
+			std::cout << " ";
 
 			temp = temp->next;
 		}
@@ -195,7 +203,14 @@ void DoublyLinkedList::PrintFromFrontToBack()
 	temp = _head;
 	while (temp != nullptr)
 	{
-		std::cout << "\t" << temp->data << std::endl;
+		std::cout << "_________" << std::endl;
+		std::cout << "|" << std::setw(5) << "prev" << std::setw(5) << "|" << std::endl;
+		std::cout << "|_________|" << std::endl;
+		std::cout << "|" << std::setw(5) << temp->data << std::setw(5) << "|" << std::endl;
+		std::cout << "|_________|" << std::endl;
+		std::cout << "|" << std::setw(5) << "next" << std::setw(5) << "|" << std::endl;
+		std::cout << "|_________|" << std::endl;
+		std::cout << " ";
 
 		temp = temp->prev;
 	}

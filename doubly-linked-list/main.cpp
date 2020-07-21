@@ -22,29 +22,38 @@ int main()
 	}
 
 	system("cls");
+	try
+	{
+		if (list.empty())
+			throw out_of_range("Doubly Linked List is empty!");
 
-	cout << "\nDefault Doubly Linked List:\n ";
+		cout << "\nDefault Doubly Linked List:\n ";
 
-	list.PrintFromBackToFront();
-	cout << endl;
+		list.PrintFromBackToFront();
+		cout << endl;
+
+		cout << "================================" << endl;
+
+		list.IndividualTask();
+
+		cout << "\nChanged Doubly Linked List from back to front:\n ";
+
+		list.PrintFromBackToFront();
+		cout << endl;
+
+		cout << "================================" << endl;
+
+		cout << "\nChanged Doubly Linked List from front to back:\n ";
+
+		list.PrintFromFrontToBack();
+
+		cout << endl;
+	}
+	catch (const out_of_range&e)
+	{
+		cout << e.what() << endl;
+	}
 	
-	cout << "================================" << endl;
-
-	list.IndividualTask();
-
-
-	cout << "\nChanged Doubly Linked List from back to front:\n ";
-
-	list.PrintFromBackToFront();
-	cout << endl;
-
-	cout << "================================" << endl;
-
-	cout << "\nChanged Doubly Linked List from front to back:\n ";
-
-	list.PrintFromFrontToBack();
-
-	cout << endl;
 	system("pause");
 	return 0;
 }
